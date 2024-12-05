@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulau Sulawesi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="images/tt-logo2.png" type="image/x-icon">
+    <style>
+        body {
+        padding-top: 87px; /* Memberi ruang untuk navbar */
+    }
+        
+        .hero-section {
+            background-image: url('https://i.pinimg.com/736x/82/88/9c/82889c4e4b27d60c72f8f665da735be7.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: white;
+        }
+
+        .card img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .transition-transform {
+           transition: transform 0.3s ease;
+       }
+       .hover-shadow:hover {
+           transform: scale(1.05);
+       }
+    </style>
+</head>
+
+<body>
+     <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow fixed-top">
+    <div class="container d-flex align-items-center">
+      <!-- Logo besar -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="/images/logo-dark.png" alt="Taruma Travel Logo" style="height: 60px; margin-right: 15px;">
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link active" href="destinations.html">Back to Destinations</a>
+          </li>
+      </div>
+</nav>    
+
+    <!-- Hero Section -->
+    <div class="hero-section d-flex align-items-center justify-content-center text-center">
+        <div>
+            <h1 class="display-4 fw-bold">Selamat Datang di Pulau Sulawesi</h1>
+        </div>
+    </div>
+
+
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Tentang Pulau Sulawesi</h2>
+                <p>Pulau Sulawesi, yang sebelumnya dikenal sebagai Celebes, adalah salah satu pulau terbesar di Indonesia dan terletak di
+                bagian tengah kepulauan Indonesia. Sulawesi memiliki bentuk yang unik, menyerupai huruf "K", dan dikelilingi oleh laut
+                yang kaya akan keanekaragaman hayati. Berikut adalah beberapa aspek penting mengenai Pulau Sulawesi:
+                
+                Geografi
+                Luas: Sulawesi memiliki luas sekitar 174.600 km², menjadikannya pulau terbesar keempat di Indonesia.
+                Tanjung dan Teluk: Pulau ini memiliki banyak tanjung, teluk, dan pulau-pulau kecil di sekitarnya, seperti Pulau Togian
+                dan Pulau Bunaken.
+                Pegunungan: Terdapat pegunungan yang membentang di tengah pulau, dengan puncak tertinggi adalah Gunung Rantekombola.
+                Keanekaragaman Hayati
+                Flora dan Fauna: Sulawesi dikenal dengan keanekaragaman hayatinya yang luar biasa. Pulau ini adalah rumah bagi banyak
+                spesies endemik, termasuk babi rusa Sulawesi, anoa, dan berbagai jenis burung serta primata.
+                Taman Nasional: Terdapat beberapa taman nasional yang melindungi ekosistem unik, seperti Taman Nasional Lore Lindu dan
+                Taman Nasional Bunaken yang terkenal dengan keindahan bawah lautnya.
+                Budaya
+                Suku dan Etnis: Sulawesi dihuni oleh berbagai suku, termasuk suku Bugis, Makassar, Toraja, dan Minahasa. Setiap suku
+                memiliki bahasa, tradisi, dan kebudayaan yang kaya.
+                Arsitektur: Rumah adat Sulawesi, seperti rumah Tongkonan di Toraja, memiliki arsitektur yang khas dan sering dihiasi
+                dengan ukiran yang indah.
+                Tradisi dan Upacara: Masyarakat Sulawesi terkenal dengan tradisi upacara adat yang beragam, termasuk upacara pemakaman
+                Toraja yang megah dan penuh ritual.
+                Ekonomi
+                Pertanian dan Perkebunan: Sulawesi memiliki sektor pertanian yang kuat, dengan komoditas utama seperti kakao, kelapa
+                sawit, kopi, dan rempah-rempah.
+                Perikanan: Laut di sekitar Sulawesi kaya akan hasil laut, dan perikanan menjadi salah satu sumber pendapatan bagi
+                masyarakat pesisir.
+                Tantangan
+                Lingkungan: Sulawesi menghadapi tantangan lingkungan, termasuk deforestasi, penangkapan ikan yang berlebihan, dan dampak
+                perubahan iklim.
+                Pengembangan: Meskipun kaya akan sumber daya, beberapa daerah di Sulawesi masih menghadapi masalah kemiskinan dan akses
+                terbatas terhadap pendidikan dan layanan kesehatan.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="/images/destination/patung.jpg" alt="Pulau Sulawesi" width="600px" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+
+    <!-- Card Section -->
+    <section class="container my-5">
+        <h2 class="text-center mb-4">Destinasi Favorit di Pulau Sulawesi</h2>
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="#your-link-here" class="text-decoration-none">
+                    <div class="card shadow-sm h-100 transition-transform hover-shadow">
+                        <img src="/images/destination/tanas.jpg" class="card-img-top rounded" alt="Underwater scene with coral reefs">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Taman Nasional Bunaken</h5>
+                            <p class="card-text">
+                                Bunaken has an incredible variety of marine life such as 70 different corals, five species of turtles.
+                                As well as many endangered fish species and dugongs, even white and black reef sharks, as well as barracudas and even
+                                saltwater crocodiles!
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Item 2 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="#your-link-here" class="text-decoration-none">
+                    <div class="card shadow-sm h-100 transition-transform hover-shadow">
+                        <img src="/images/destination/toraja.jpg" class="card-img-top rounded" alt="Underwater scene with coral reefs">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Tanah Toraja</h5>
+                            <p class="card-text">
+                                The Toraja funeral tradition lasts for days, and one of the rituals in it is the slaughter of buffalo.
+                                Because of this unique culture, Tana Toraja has become one of the tourist attractions in Sulawesi that is famous
+                                throughout the world.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <!-- Item 3 -->
+            <div class="col-md-6 col-lg-4">
+                <a href="#your-link-here" class="text-decoration-none">
+                    <div class="card shadow-sm h-100 transition-transform hover-shadow">
+                        <img src="/images/destination/kanonang.jpg" class="card-img-top rounded" alt="Underwater scene with coral reefs">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Bukit Kasih Kanonang</h5>
+                            <p class="card-text">
+                                Kanonang Hill of Love is a tourist attraction that symbolizes harmony between religious communities in North Sulawesi
+                                Province.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+    </section>
+
+    <!-- Footer Section -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Logo and Social Media Icons -->
+        <div class="col-md-6 d-flex flex-column align-items-start">
+          <div class="mb-3">
+            <img src="/images/logo-light.png" alt="Taruma Travel Logo" class="footer-logo img-fluid" style="max-width: 175px; margin-left: 50px;">
+          </div>
+          <div>
+            <a href="https://facebook.com" target="_blank" class="text-white me-3" style="margin-left: 50px;">
+                <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="text-white me-3">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="text-white me-3">
+                <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="text-white me-3">
+                <i class="fab fa-youtube fa-lg"></i>
+            </a>
+            <a href="https://tiktok.com" target="_blank" class="text-white">
+                <i class="fab fa-tiktok fa-lg"></i>
+            </a>
+        </div>
+        </div>
+        <!-- Center Text -->
+        <div class="col-md-6 text-center d-flex flex-column justify-content-center">
+          <p class="mb-1">Taruma Travel adalah panduan traveler Indonesia mendapatkan informasi terbaru, inspirasi destinasi wisata, serta tips menarik untuk liburan berkesan.</p>
+        </div>
+      </div>
+      <!-- Footer Links -->
+      <hr class="bg-light">
+      <div class="text-center">
+        <a href="#" class="text-white text-decoration-none me-3">Cookie Policy</a>
+        <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a> 
+        <a href="#" class="text-white text-decoration-none me-3">Terms and Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pulau Jawa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="images/tt-logo2.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            color: #2d3748;
+            margin: 0;
+            padding: 0;
+            padding-top: 83px; /* Memberi ruang untuk navbar fixed */
+        }
+
+        .navbar {
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 15px;
+            margin-left: 20px;
+        }
+
+        .hero-section {
+            background-image: url('https://i.pinimg.com/736x/b7/27/92/b72792526028f5e372272d00c37a3590.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            color: white;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .card img {
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .transition-transform {
+            transition: transform 0.3s ease;
+        }
+
+        .hover-shadow:hover {
+            transform: scale(1.05);
+        }
+
+        .container {
+            max-width: 1200px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/images/logo-dark.png" alt="Taruma Travel Logo">
+            </a>
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="destinations.html">Back to Destinations</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section d-flex align-items-center justify-content-center text-center">
+        <div>
+            <h1 class="display-4 fw-bold">Selamat Datang di Pulau Jawa</h1>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Tentang Pulau Jawa</h2>
+                <p>Pulau Jawa adalah pulau terluas ke-13 di dunia dan terbesar kelima di Indonesia, dengan luas sekitar
+                    126.700 km persegi.
+                    Pulau ini merupakan pusat budaya dan ekonomi Indonesia, dihuni oleh hampir 160 juta orang, dan
+                    terdiri dari enam
+                    provinsi. Diken al sebagai pulau dengan kepadatan penduduk tertinggi di dunia, Jawa menyumbang
+                    sekitar 60% dari total
+                    populasi Indonesia. Berikut adalah beberapa poin penting tentang Pulau Jawa:
+
+                    Geografi dan Iklim
+
+                    Terletak di antara Pulau Sumatra di barat dan Pulau Bali di timur, Pulau Jawa dikelilingi oleh Laut
+                    Jawa di utara dan
+                    Samudra Hindia di selatan.
+
+                    Memiliki iklim tropis dengan curah hujan tertinggi terjadi pada bulan Januari dan Februari.
+
+                    Terdapat banyak gunung berapi, termasuk Gunung Semeru dan Gunung Merapi, yang berkontribusi pada
+                    kesuburan tanahnya.
+
+                    Budaya dan Bahasa
+
+                    Pulau Jawa adalah rumah bagi berbagai etnis, dengan etnis Jawa dan Sunda sebagai yang terbesar.
+
+                    Tiga bahasa utama yang digunakan adalah Bahasa Jawa, Bahasa Sunda, dan Bahasa Betawi.
+
+                    Budaya Jawa kaya akan tradisi, seni, dan sejarah, dengan banyak kerajaan yang pernah berkuasa di
+                    pulau ini, seperti
+                    Majapahit dan Mataram.
+
+                    Sejarah
+
+                    Sejak zaman kuno, Jawa telah menjadi pusat peradaban, dengan pengaruh Hindu-Buddha yang kuat sebelum
+                    kedatangan Islam.
+
+                    Kerajaan Islam pertama di Jawa adalah Kesultanan Demak, yang muncul pada akhir abad ke-16.
+
+                    Selama masa kolonial, Jawa menjadi pusat administrasi dan ekonomi bagi Belanda, yang memperkenalkan
+                    berbagai tanaman
+                    komersial.
+
+                    Ekonomi
+
+                    Pulau Jawa adalah lumbung padi Indonesia, dengan lahan pertanian yang subur.
+
+                    Selain pertanian, industri dan perdagangan juga berkembang pesat, terutama di kota-kota besar
+                    seperti Jakarta, Surabaya,
+                    dan Bandung.
+
+                    Jaringan transportasi yang baik, termasuk jalan tol dan kereta api, mendukung mobilitas barang dan
+                    orang di pulau ini.
+                </p>
+            </div>
+            <div class="col-md-6">
+                <img src="/images/destination/dieng.jpg" alt="Pulau Jawa" width="600px" class="img-fluid rounded">
+            </div>
+        </div>
+    </section>
+
+    <!-- Card Section -->
+    <section class="container my-5">
+        <hr class="bg-light">
+    <h2 class="text-center mb-4">Destinasi Favorit di Pulau Jawa</h2>
+    <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-md-6 col-lg-4">
+            <a href="borobudur.html" class="text-decoration-none">
+                <div class="card shadow-sm h-100 transition-transform hover-shadow">
+                    <img src="/images/destination/borobudur.jpg" class="card-img-top rounded" alt="Underwater scene with coral reefs">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Candi Borobudur</h5>
+                        <p class="card-text">
+                            Sunrise at Borobudur is a magical moment, when the first light hits the reliefs and stupas, bringing
+                            the magic to life.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Item 2 -->
+        <div class="col-md-6 col-lg-4">
+            <a href="yogyakarta.html" class="text-decoration-none">
+                <div class="card shadow-sm h-100 transition-transform hover-shadow">
+                    <img src="/images/destination/yogyakarta.jpg" class="card-img-top rounded" alt="Underwater scene with coral reefs">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Kota Yogyakarta</h5>
+                        <p class="card-text">
+                            Known as the "Special City," Jogja combines natural beauty with a deep
+                            cultural heritage.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <!-- Item 3 -->
+        <div class="col-md-6 col-lg-4">
+            <a href="bromo.html" class="text-decoration-none">
+                <div class="card shadow-sm h-100 transition-transform hover-shadow">
+                    <img src="/images/destination/bromo1.jpg" class="card-img-top rounded">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">Gunung Bromo</h5>
+                        <p class="card-text">
+                            Every breath taken while climbing Bromo is a reminder of the beauty and
+                            challenges of life.
+                        </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+</section>
+
+    <!-- Footer Section -->
+<footer class="bg-dark text-white py-4">
+    <div class="container">
+      <div class="row">
+        <!-- Logo and Social Media Icons -->
+        <div class="col-md-6 d-flex flex-column align-items-start">
+          <div class="mb-3">
+            <img src="/images/logo-light.png" alt="Taruma Travel Logo" class="footer-logo img-fluid" style="max-width: 175px; margin-left: 50px;">
+          </div>
+          <div>
+            <a href="https://facebook.com" target="_blank" class="text-white me-3" style="margin-left: 50px;">
+                <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="text-white me-3">
+                <i class="fab fa-instagram fa-lg"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="text-white me-3">
+                <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a href="https://youtube.com" target="_blank" class="text-white me-3">
+                <i class="fab fa-youtube fa-lg"></i>
+            </a>
+            <a href="https://tiktok.com" target="_blank" class="text-white">
+                <i class="fab fa-tiktok fa-lg"></i>
+            </a>
+        </div>
+        </div>
+        <!-- Center Text -->
+        <div class="col-md-6 text-center d-flex flex-column justify-content-center">
+          <p class="mb-1">Taruma Travel adalah panduan traveler Indonesia mendapatkan informasi terbaru, inspirasi destinasi wisata, serta tips menarik untuk liburan berkesan.</p>
+        </div>
+      </div>
+      <!-- Footer Links -->
+      <hr class="bg-light">
+      <div class="text-center">
+        <a href="#" class="text-white text-decoration-none me-3">Cookie Policy</a>
+        <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a> 
+        <a href="#" class="text-white text-decoration-none me-3">Terms and Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
