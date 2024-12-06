@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="travelApp">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Destinations - Taruma Travel</title>
+<!-- Favicon -->
+<link href="/images/logo-head.png" rel="icon" type="image/x-icon"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;family=Poppins:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<!-- Icon Medsos -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<!-- AOS CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet"/>
+<!-- AngularJS -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<style>
+    body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0) 70%), 
+              url('/images/home/take-off.gif') no-repeat center center/cover;
+  pointer-events: none;
+  z-index: -1;
+  padding-top: 80px;
+}
+
+            .gambar-container {
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                margin-bottom: 20px;
+            }
+
+            /* Navbar Section */
+.navbar {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar {
+            margin-bottom: 0;
+            padding: 1rem 2rem;
+            background-color: #f8f9fa;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+.navbar-nav .nav-link {
+  font-size: 15px; /* Ukuran teks menu navbar */
+  margin-left: 20px; /* Jarak antar menu */
+}
+            
+
+            .gambar-container img {
+                width: 100%;
+                height: auto;
+                display: block;
+            }
+
+            .region-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                background: rgba(0, 0, 0, 0.6);
+                color: white;
+                text-align: center;
+                padding: 10px;
+                font-size: 18px;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            .gambar-container:hover .region-overlay {
+                background: rgba(0, 0, 0, 0.8);
+                font-size: 20px;
+            }
+
+            a.text-decoration-none {
+                text-decoration: none;
+            }
+
+        .content {
+            margin-top: 70px; /* Adjust height according to the navbar */
+            text-align: center;
+        }
+
+        .card {
+            position: relative;
+            border: none;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+         .card:hover img {
+            transform: scale(1.05);
+        }
+.overlay-title {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+        }
+       .overlay-title h5 {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+
+      .card-body p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        h1 {
+            margin-top: 100px;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        h3 {
+            text-align: center;
+            font-size: auto;
+            color: black;
+            font-size: 3.6rem;
+        }
+
+        p {
+            margin-top: 15px;
+            color:#555;
+            font-size: 1.1rem;
+        }
+
+        p2 {
+            margin-top: 15px;
+            color: white;
+            font-size: 1.1rem;
+        }
+</style>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow fixed-top" data-aos="fade-down">
+<div class="container d-flex align-items-center">
+<a class="navbar-brand d-flex align-items-center" href="#">
+<img alt="Taruma Travel Logo" src="/images/logo-dark.png" style="height: 60px; margin-left: 40px;"/>
+</a>
+<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarNav" style="margin-right: 40px;">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item">
+<a class="nav-link" href="/pages/home/home.html">Home</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="/pages/destinations/destinations.html">Destinations</a>
+</li>
+<!-- Dropdown Menu About Us -->
+<li class="nav-item dropdown">
+<a aria-expanded="false" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" id="navbarDropdown" role="button">
+              About Us
+            </a>
+<ul aria-labelledby="navbarDropdown" class="dropdown-menu">
+<li>
+<a class="dropdown-item" href="/pages/about/about.html">Team TarumaTravel</a>
+</li>
+<li>
+<a class="dropdown-item" href="/pages/about/contact.html">Contact Us</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<div class="container content" data-aos="fade-up">
+<h1 class="display-2 fw-bold">What makes this country a wonderful place to visit.</h1>
+<p> The beauty of the beautiful natural scenery combined with the unique cultures of its people. Enjoy untouched
+            beaches, mountains, lakes, and many other delightful tourist destinations as well as magnificent city
+            skylines
+            throughout the country. And when you decide to see it all, one visit will not be enough to experience the
+            wonders
+            of Indonesia.
+        </p>
+</div>
+<div class="container mt-5">
+<h2>Explore Indonesia By Region</h2>
+<hr class="bg-light"/>
+<div class="row">
+<!-- JAVA -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<a class="text-decoration-none" href="java.html">
+<div class="gambar-container" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+<img alt="Borobudur in Java, Indonesia" class="img-fluid" src="/images/destination/java.jpg"/>
+<div class="region-overlay">JAVA</div>
+</div>
+</a>
+</div>
+<!-- BALI & NUSA TENGGARA -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<a class="text-decoration-none" href="balinusa.html">
+<div class="gambar-container" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+<img alt="Bali Gate in Bali &amp; Nusa Tenggara, Indonesia" class="img-fluid" src="/images/destination/bali.jpg"/>
+<div class="region-overlay">BALI &amp; NUSA TENGGARA</div>
+</div>
+</a>
+</div>
+<!-- MALUKU & PAPUA -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<a class="text-decoration-none" href="maupa.html">
+<div class="gambar-container" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+<img alt="Beach in Maluku &amp; Papua, Indonesia" class="img-fluid" src="/images/destination/papua.jpg"/>
+<div class="region-overlay">MALUKU &amp; PAPUA</div>
+</div>
+</a>
+</div>
+<!-- SUMATERA -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<a class="text-decoration-none" href="sumatera.html">
+<div class="gambar-container" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+<img alt="Musi River in Sumatera, Indonesia" class="img-fluid" src="/images/destination/sumatera.jpg"/>
+<div class="region-overlay">SUMATERA</div>
+</div>
+</a>
+</div>
+<!-- KALIMANTAN -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<a class="text-decoration-none" href="kalimantan.html">
+<div class="gambar-container" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+<img alt="Equator in Kalimantan, Indonesia" class="img-fluid" src="/images/destination/kalimantan.jpg"/>
+<div class="region-overlay">KALIMANTAN</div>
+</div>
+</a>
+</div>
+<!-- SULAWESI -->
+<div class="col-sm-6 col-lg-4 mb-4">
+<a class="text-decoration-none" href="sulawesi.html">
+<div class="gambar-container" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="200">
+<img alt="Bunaken Sea in Sulawesi, Indonesia" class="img-fluid" src="/images/destination/sulawesi.jpg"/>
+<div class="region-overlay">SULAWESI</div>
+</div>
+</a>
+</div>
+</div>
+</div>
+<body data-aos-easing="ease-out-cubic" data-aos-duration="1000" data-aos-delay="50">
+<div class="container py-5">
+<div class="row g-4">
+<h3>Popular Place</h3>
+<hr class="bg-light"/>
+<div class="col-md-6 col-lg-4">
+<a class="text-decoration-none" href="menjangan.html">
+<div class="card shadow-sm h-100" data-aos="flip-left" data-aos-duration="1000">
+<img alt="Underwater scene with coral reefs" class="card-img-top rounded" src="/images/destination/menjangan.jpg"/>
+<div class="card-body">
+<div class="overlay-title">
+<h5>Menjangan Island</h5>
+</div>
+<p>Every corner of this island is a perfect blend of serenity and beauty, inviting us to
+                                explore underwater wonders and enjoy peaceful moments amidst nature.</p>
+</div>
+</div>
+</a>
+</div>
+<!-- Item 2 -->
+<div class="col-md-6 col-lg-4">
+<a class="text-decoration-none" href="ulundanu.html">
+<div class="card shadow-sm h-100" data-aos="flip-left" data-aos-duration="1000">
+<img alt="Iconic temple on Lake Beratan" class="card-img-top rounded" src="/images/destination/ulundanu.jpg"/>
+<div class="card-body">
+<div class="overlay-title">
+<h5>Ulun Danu Beratan</h5>
+</div>
+<p>Discover this iconic temple set on the serene Lake Beratan in Bali's highlands.</p>
+</div>
+</div>
+</a>
+</div>
+<!-- Item 3 -->
+<div class="col-md-6 col-lg-4">
+<a class="text-decoration-none" href="bromo.html">
+<div class="card shadow-sm h-100" data-aos="flip-left" data-aos-duration="1000">
+<img alt="Pura Besakih temple with mountains in the background" class="card-img-top rounded" src="/images/destination/bromo.jpg"/>
+<div class="card-body">
+<div class="overlay-title">
+<h5>Gunung Bromo</h5>
+</div>
+<p>Where colorful skies blend with a sea of sand. Every second here is a living painting,
+                            reminding us of the majesty of God's creation.</p>
+</div>
+</div>
+</a>
+</div>
+<!-- Additional Items -->
+<div class="col-md-6 col-lg-4">
+<a class="text-decoration-none" href="labuanbajo.html">
+<div class="card shadow-sm h-100" data-aos="flip-left" data-aos-duration="1000">
+<img alt="Dolphins playing in the water at Lovina Beach" class="card-img-top rounded" src="/images/destination/labuanbajo.jpg"/>
+<div class="card-body">
+<div class="overlay-title">
+<h5>Labuan Bajo</h5>
+</div>
+<p>Every sunset is a painting, and every island holds a story waiting to be explored.</p>
+</div>
+</div>
+</a>
+</div>
+<div class="col-md-6 col-lg-4">
+<a class="text-decoration-none" href="rajaampat.html">
+<div class="card shadow-sm h-100" data-aos="flip-left" data-aos-duration="1000">
+<img alt="Bali's Janger Dance performance" class="card-img-top rounded" src="/images/destination/rajampat.jpg"/>
+<div class="card-body">
+<div class="overlay-title">
+<h5>Raja Ampat</h5>
+</div>
+<p>Every coral reef and sunset is a natural poem that invites us to experience its unparalleled
+                            beauty.</p>
+</div>
+</div>
+</a>
+</div>
+<div class="col-md-6 col-lg-4">
+<div class="card shadow-sm h-100" data-aos="flip-left" data-aos-duration="1000">
+<a class="text text-decoration-none" href="mtrinjani.html">
+<img alt="Mount Rinjani with its crater lake" class="card-img-top rounded" src="/images/destination/rinjani.jpg"/>
+<div class="card-body">
+<div class="overlay-title">
+<h5>Mount Rinjani</h5>
+</div>
+<p>Explore the majestic Mount Rinjani, a volcanic peak with breathtaking views and a stunning
+                            crater lake.</p>
+</div>
+</a></div>
+</div>
+</div>
+</div>
+<!-- Footer Section -->
+<footer class="bg-dark text-white py-4">
+<div class="container">
+<div class="row">
+<!-- Logo and Social Media Icons -->
+<div class="col-md-6 d-flex flex-column align-items-start">
+<div class="mb-3">
+<img alt="Taruma Travel Logo" class="footer-logo img-fluid" src="/images/logo-light.png" style="max-width: 175px; margin-left: 50px;"/>
+</div>
+<div>
+<a class="text-white me-3" href="https://facebook.com" style="margin-left: 50px;" target="_blank">
+<i class="fab fa-facebook fa-lg"></i>
+</a>
+<a class="text-white me-3" href="https://instagram.com" target="_blank">
+<i class="fab fa-instagram fa-lg"></i>
+</a>
+<a class="text-white me-3" href="https://twitter.com" target="_blank">
+<i class="fab fa-twitter fa-lg"></i>
+</a>
+<a class="text-white me-3" href="https://youtube.com" target="_blank">
+<i class="fab fa-youtube fa-lg"></i>
+</a>
+<a class="text-white" href="https://tiktok.com" target="_blank">
+<i class="fab fa-tiktok fa-lg"></i>
+</a>
+</div>
+</div>
+<!-- Center Text -->
+<div class="col-md-6 text-center d-flex flex-column justify-content-center">
+<p class="mb-1">Taruma Travel adalah panduan traveler Indonesia mendapatkan informasi terbaru, inspirasi destinasi wisata, serta tips menarik untuk liburan berkesan.</p>
+</div>
+</div>
+<!-- Footer Links -->
+<hr class="bg-light"/>
+<div class="text-center">
+<a class="text-white text-decoration-none me-3" href="#">Cookie Policy</a>
+<a class="text-white text-decoration-none me-3" href="#">Privacy Policy</a>
+<a class="text-white text-decoration-none me-3" href="#">Terms and Conditions</a>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    AOS.init();
+  });
+</script>
+</body></head></html>

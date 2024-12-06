@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="tarumaTravelApp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Taruma Travel</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- AngularJS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <script src="/js/about.js"></script>
+  <!-- Icon Medsos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Favicon -->
+  <link rel="icon" href="/images/logo-head.png" type="image/x-icon">
+  <style>
+    body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0) 70%), 
+              url('/images/home/take-off.gif') no-repeat center center/cover;
+  pointer-events: none;
+  z-index: -1;
+  padding-top: 80px;
+}
+
+
+ /* Navbar Section */
+.navbar {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-nav .nav-link {
+  font-size: 15px; /* Ukuran teks menu navbar */
+  margin-left: 20px; /* Jarak antar menu */
+}
+
+main {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+    /* Section Backgrounds */
+    #about, #team, #contact {
+      padding: 50px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      margin-top: 50px;
+      color: #000;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    #about:hover, #team:hover, #contact:hover {
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .team-card {
+  width: 250px;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparansi ditambahkan */
+  backdrop-filter: blur(5px); /* Menambahkan efek blur pada latar belakang */
+  transition: transform 0.3s, box-shadow 0.3s;
+  }
+    .team-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+    .team-card img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      border: 3px solid #000000;
+    }
+    .team-card .card-title {
+      font-size: 1.25rem;
+      color: #333;
+      margin-top: 1rem;
+    }
+    .team-card .text-muted {
+      color: #666;
+    }
+
+    /* Button Styling */
+    .btn-primary {
+      background-color: #000000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      color: #fff;
+    }
+    .btn-primary:hover {
+      background-color: #433d49;
+    }
+
+    .text-primary {
+    color: black !important;
+    }
+
+    /* Footer Section */
+  footer .fab {
+    transition: color 0.3s ease;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none; /* Menghapus garis kecil */
+  }
+  
+  footer .fab:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+  }
+
+  
+  footer hr {
+    margin: 1rem 0;
+    border: 0.5px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  footer select {
+    cursor: pointer;
+  }
+  </style>
+  <!-- AOS CSS -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent shadow fixed-top" data-aos="fade-down">
+    <div class="container d-flex align-items-center">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="/images/logo-dark.png" alt="Taruma Travel Logo" style="height: 60px; margin-left: 40px;">
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" style="margin-right: 40px;" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link  " href="/pages/home/home.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pages/destinations/destinations.html">Destinations</a>
+          </li>
+          <!-- Dropdown Menu About Us -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              About Us
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a class="dropdown-item" href="/pages/about/about.html">Team TarumaTravel</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/pages/about/contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<body ng-controller="TarumaTravelController">  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    });
+  </script>
+</body>
+<main>
+
+  <!-- About Taruma Travel Section -->
+  <div id="about" class="container" data-aos="fade-up" mt-5 text-center">
+    <h2 class="text-primary" style="color: black;">About Taruma Travel</h2>
+    <p class="mt-3">
+      Taruma Travel adalah media digital untuk para petualang masa kini, siap membuka jalan buat kamu mengeksplorasi dunia dengan cara yang keren dan autentik. Kami adalah pusat inspirasi untuk generasi yang haus pengalaman dan menginginkan perjalanan lebih dari sekadar tempat wisata.
+    </p>
+    <p>
+      Lewat konten yang relate, panduan jitu, dan tips dari sesama traveler, Taruma Travel ingin jadi sahabat terbaik kamu dalam merencanakan perjalanan yang penuh makna. Kami menghadirkan berbagai insight unik, destinasi kekinian, dan rekomendasi aktivitas yang anti-mainstream. So, let’s make memories worth sharing with Taruma Travel!
+    </p>
+  </div>
+  
+  <!-- Management Team Section -->
+  <div id="team" class="container" data-aos="zoom-in" text-center mt-5">
+    <h3 class="text-primary" style="color: black;">Taruma Travel Management Team</h3>
+    <p class="mt-3">
+      Taruma Travel didukung oleh tim yang berjiwa muda dan penuh semangat, perpaduan sempurna antara kreativitas dan bakat. Kami berkomitmen menciptakan tren baru di industri perjalanan dan menginspirasi pembaca untuk mewujudkan impian traveling mereka.
+    </p>
+    
+    <div class="row mt-4 justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" ng-repeat="member in team">
+        <div class="team-card mx-auto">
+          <img ng-src="{{ member.image }}" alt="{{ member.name }}" class="img-fluid">
+          <div class="card-body">
+            <h5 class="card-title">{{ member.name }}</h5>
+            <p class="text-muted">{{ member.position }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Collaborate Section -->
+  <div id="contact" class="container" data-aos="fade-up" text-center mt-5">
+    <h3 class="text-primary" style="color: black;">Collaborate with Taruma Travel</h3>
+    <p class="mt-3">
+      Tertarik untuk bekerja sama dengan kami? Kirimkan cerita, press release, atau pasang iklan di platform kami melalui <a href="contact.html" class="text-primary">formulir kontak</a>.
+    </p>
+    <a href="contact.html" class="btn btn-primary mt-3">Get in Touch</a>
+  </div>
+</main>
+  
+
+  <!-- Footer Section -->
+<footer class="bg-dark text-white py-4">
+  <div class="container">
+    <div class="row">
+      <!-- Logo and Social Media Icons -->
+      <div class="col-md-6 d-flex flex-column align-items-start">
+        <div class="mb-3">
+          <img src="/images/logo-light.png" alt="Taruma Travel Logo" class="footer-logo img-fluid" style="max-width: 175px; margin-left: 50px;">
+        </div>
+        <div>
+          <a href="https://facebook.com" target="_blank" class="text-white me-3" style="margin-left: 50px;">
+              <i class="fab fa-facebook fa-lg"></i>
+          </a>
+          <a href="https://instagram.com" target="_blank" class="text-white me-3">
+              <i class="fab fa-instagram fa-lg"></i>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="text-white me-3">
+              <i class="fab fa-twitter fa-lg"></i>
+          </a>
+          <a href="https://youtube.com" target="_blank" class="text-white me-3">
+              <i class="fab fa-youtube fa-lg"></i>
+          </a>
+          <a href="https://tiktok.com" target="_blank" class="text-white">
+              <i class="fab fa-tiktok fa-lg"></i>
+          </a>
+      </div>
+      </div>
+      <!-- Center Text -->
+      <div class="col-md-6 text-center d-flex flex-column justify-content-center">
+        <p class="mb-1">Taruma Travel adalah panduan traveler Indonesia mendapatkan informasi terbaru, inspirasi destinasi wisata, serta tips menarik untuk liburan berkesan.</p>
+      </div>
+    </div>
+    <!-- Footer Links -->
+    <hr class="bg-light">
+    <div class="text-center">
+      <a href="#" class="text-white text-decoration-none me-3">Cookie Policy</a>
+      <a href="#" class="text-white text-decoration-none me-3">Privacy Policy</a> 
+      <a href="#" class="text-white text-decoration-none me-3">Terms and Conditions</a>
+    </div>
+  </div>
+
+
+  <!-- Bootstrap JS Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      AOS.init({
+        duration: 1000,
+        once: true
+      });
+    });
+  </script>
+</body>
+</html>
